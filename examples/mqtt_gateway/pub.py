@@ -26,7 +26,7 @@ import paho.mqtt.client as mqtt
 
 my_client = mqtt.Client()
 my_client.connect("localhost", 1883, 60)
-z = {'from_mqtt_client': 'hello'}
+z = {'from_mqtt_client': 'hello, it\'s me'}
 
 payload = json.dumps(z).encode()
 my_client.publish("mqtt_network", payload)
